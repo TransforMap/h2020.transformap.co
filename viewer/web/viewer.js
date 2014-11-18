@@ -24,7 +24,7 @@
 
 'use strict';
 
-var DEFAULT_URL = 'compressed.tracemonkey-pldi-09.pdf';
+var DEFAULT_URL = 'h2020-call-pt-ria-ia_en.pdf';
 var DEFAULT_SCALE = 'auto';
 var DEFAULT_SCALE_DELTA = 1.1;
 var UNKNOWN_SCALE = 0;
@@ -1222,7 +1222,7 @@ var PDFFindController = {
         if (!this.hadMatch) {
           // No point in wrapping, there were no matches.
           this.updateMatch(false);
-          // while matches were not found, searching for a page 
+          // while matches were not found, searching for a page
           // with matches should nevertheless halt.
           return true;
         }
@@ -2600,7 +2600,7 @@ var DocumentProperties = {
 
   parseDate: function documentPropertiesParseDate(inputDate) {
     // This is implemented according to the PDF specification (see
-    // http://www.gnupdf.org/Date for an overview), but note that 
+    // http://www.gnupdf.org/Date for an overview), but note that
     // Adobe Reader doesn't handle changing the date to universal time
     // and doesn't use the user's time zone (they're effectively ignoring
     // the HH' and mm' parts of the date string).
@@ -5232,7 +5232,7 @@ var TextLayerBuilder = (function TextLayerBuilderClosure() {
         var end = match.end;
         var isSelected = (isSelectedPage && i === selectedMatchIdx);
         var highlightSuffix = (isSelected ? ' selected' : '');
-         
+
         if (isSelected && !this.isViewerInPresentationMode) {
           scrollIntoView(textDivs[begin.divIdx],
                          { top: FIND_SCROLL_OFFSET_TOP,
@@ -6102,5 +6102,3 @@ window.addEventListener('afterprint', function afterPrint(evt) {
     window.requestAnimationFrame(resolve);
   });
 })();
-
-
